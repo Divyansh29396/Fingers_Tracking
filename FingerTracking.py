@@ -19,7 +19,7 @@ while True:
     frame = cv2.flip(frame,1)
     
     frame = detect.find_number_of_hands(frame)
-    position = detect.find_position_of_hands(frame)    
+    position = detect.find_position_of_hands(frame,to_draw=False)    
     if len(position) != 0:
         if position[4][1] < position[3][1]:
             fingers.append(1)
