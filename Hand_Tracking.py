@@ -41,6 +41,9 @@ class handTrack():
                 cx = int(lm.x*h)
                 cy = int(lm.y*w)
                 lmlist.append([id,cx,cy])
+                if to_draw:
+                    if id == 8:
+                        cv2.circle(frame,(cx,cy),20,(255,0,0),-1)
         return lmlist
         
 def main():
